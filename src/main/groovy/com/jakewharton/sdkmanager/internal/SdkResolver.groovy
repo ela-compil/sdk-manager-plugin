@@ -102,6 +102,7 @@ class SdkResolver {
     if (isWindows) {
       // Escape Windows file separators when writing as a path.
       path = path.replace "\\", "\\\\"
+      path = path.replace ":", "\\:"
     }
     if (localProperties.exists()) {
       localProperties.withWriterAppend('UTF-8') {
